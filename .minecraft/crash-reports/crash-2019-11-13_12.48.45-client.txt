@@ -1,0 +1,233 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  CreativePatchingLoader (CreativeCore_v1.9.71_mc1.12.2.jar)
+  Do not report to Forge! (If you haven't disabled the FoamFix coremod, try disabling it in the config! Note that this bit of text will still appear.) (foamfix-0.10.8-1.12.2.jar)
+  SSLoadingPlugin (SereneSeasons-1.12.2-1.2.18-universal.jar)
+  CTMCorePlugin (CTM-MC1.12.2-1.0.0.29.jar)
+  AppleCore (AppleCore-mc1.12.2-3.2.0.jar)
+  MixinLoaderForge (ValkyrienWarfare+0.9_final-universal.jar)
+  MalisisCorePlugin (malisiscore-1.12.2-6.5.1.jar)
+  ItemPatchingLoader (ItemPhysic_Full_1.4.26_mc1.12.2.jar)
+  weaponlib (mw-1.11.7.7_mc1.12.2.jar)
+Contact their authors BEFORE contacting forge
+
+// You're mean.
+
+Time: 11/13/19 12:48 PM
+Description: Rendering item
+
+java.lang.IllegalStateException: Not building!
+	at net.minecraft.client.renderer.BufferBuilder.func_178977_d(BufferBuilder.java:537)
+	at net.minecraft.client.renderer.Tessellator.func_78381_a(SourceFile:21)
+	at com.vicmatskiv.weaponlib.compatibility.CompatibleWeaponRenderer.func_188616_a(CompatibleWeaponRenderer.java:137)
+	at net.minecraftforge.client.ForgeHooksClient.renderLitItem(ForgeHooksClient.java:653)
+	at net.minecraft.client.renderer.RenderItem.func_191967_a(RenderItem.java:118)
+	at net.minecraft.client.renderer.RenderItem.func_191961_a(RenderItem.java:106)
+	at net.minecraft.client.renderer.RenderItem.func_180454_a(RenderItem.java:149)
+	at net.minecraft.client.renderer.RenderItem.func_191962_a(RenderItem.java:308)
+	at net.minecraft.client.renderer.RenderItem.func_184391_a(RenderItem.java:347)
+	at net.minecraft.client.renderer.RenderItem.func_180450_b(RenderItem.java:336)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.func_147051_a(GuiContainerCreative.java:922)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.func_146976_a(GuiContainerCreative.java:758)
+	at net.minecraft.client.gui.inventory.GuiContainer.func_73863_a(GuiContainer.java:75)
+	at net.minecraft.client.renderer.InventoryEffectRenderer.func_73863_a(InventoryEffectRenderer.java:51)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.func_73863_a(GuiContainerCreative.java:643)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396)
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:196)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:231)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at net.minecraft.client.renderer.BufferBuilder.func_178977_d(BufferBuilder.java:537)
+	at net.minecraft.client.renderer.Tessellator.func_78381_a(SourceFile:21)
+	at com.vicmatskiv.weaponlib.compatibility.CompatibleWeaponRenderer.func_188616_a(CompatibleWeaponRenderer.java:137)
+	at net.minecraftforge.client.ForgeHooksClient.renderLitItem(ForgeHooksClient.java:653)
+	at net.minecraft.client.renderer.RenderItem.func_191967_a(RenderItem.java:118)
+	at net.minecraft.client.renderer.RenderItem.func_191961_a(RenderItem.java:106)
+	at net.minecraft.client.renderer.RenderItem.func_180454_a(RenderItem.java:149)
+	at net.minecraft.client.renderer.RenderItem.func_191962_a(RenderItem.java:308)
+
+-- Item being rendered --
+Details:
+	Item Type: com.vicmatskiv.weaponlib.Weapon@73d39454
+	Registry Name: mw:m16a4
+	Item Aux: 0
+	Item NBT: null
+	Item Foil: false
+Stacktrace:
+	at net.minecraft.client.renderer.RenderItem.func_184391_a(RenderItem.java:347)
+	at net.minecraft.client.renderer.RenderItem.func_180450_b(RenderItem.java:336)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.func_147051_a(GuiContainerCreative.java:922)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.func_146976_a(GuiContainerCreative.java:758)
+	at net.minecraft.client.gui.inventory.GuiContainer.func_73863_a(GuiContainer.java:75)
+	at net.minecraft.client.renderer.InventoryEffectRenderer.func_73863_a(InventoryEffectRenderer.java:51)
+	at net.minecraft.client.gui.inventory.GuiContainerCreative.func_73863_a(GuiContainerCreative.java:643)
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396)
+
+-- Screen render details --
+Details:
+	Screen name: net.minecraft.client.gui.inventory.GuiContainerCreative
+	Mouse location: Scaled: (335, 19). Absolute: (1342, 940)
+	Screen size: Scaled: (480, 255). Absolute: (1920, 1017). Scale factor of 4
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Klari'/55, l='MpServer', x=1625.37, y=4.00, z=-1944.90]]
+	Chunk stats: MultiplayerChunkCache: 1552, 1552
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (29,4,-1547), Chunk: (at 13,0,5 in 1,-97; contains blocks 16,0,-1552 to 31,255,-1537), Region: (0,-4; contains chunks 0,-128 to 31,-97, blocks 0,0,-2048 to 511,255,-1537)
+	Level time: 315147 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 4 total; [EntityPlayerSP['Klari'/55, l='MpServer', x=1625.37, y=4.00, z=-1944.90], EntityLatchedRenderer['unknown'/4818, l='MpServer', x=8.50, y=65.00, z=8.50], PhysicsWrapperEntity['entity.physwrapper.name'/56, l='MpServer', x=1638.24, y=7.38, z=-1945.65], EntityTropiCreeper['TropiCreeper'/57, l='MpServer', x=1650.44, y=4.00, z=-1915.94]]
+	Retry entities: 1 total; [EntityLatchedRenderer['unknown'/4818, l='MpServer', x=8.50, y=65.00, z=8.50]]
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:420)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2741)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:419)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:196)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:231)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_161, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1228239384 bytes (1171 MB) / 2624585728 bytes (2503 MB) up to 3817865216 bytes (3641 MB)
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms1024m -Xmx4096m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2847 49 mods loaded, 49 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                | Version               | Source                                        | Signature                                |
+	|:------ |:----------------- |:--------------------- |:--------------------------------------------- |:---------------------------------------- |
+	| LCHIJA | minecraft         | 1.12.2                | minecraft.jar                                 | None                                     |
+	| LCHIJA | mcp               | 9.42                  | minecraft.jar                                 | None                                     |
+	| LCHIJA | FML               | 8.0.99.99             | forge-1.12.2-14.23.5.2847-universal.jar       | None                                     |
+	| LCHIJA | forge             | 14.23.5.2847          | forge-1.12.2-14.23.5.2847-universal.jar       | None                                     |
+	| LCHIJA | creativecoredummy | 1.0.0                 | minecraft.jar                                 | None                                     |
+	| LCHIJA | itemphysic        | 1.4.0                 | minecraft.jar                                 | None                                     |
+	| LCHIJA | foamfixcore       | 7.7.4                 | minecraft.jar                                 | None                                     |
+	| LCHIJA | aether_legacy     | 1.4.4                 | aether_legacy-1.12.2-v1.4.4.jar               | None                                     |
+	| LCHIJA | applecore         | 3.2.0                 | AppleCore-mc1.12.2-3.2.0.jar                  | None                                     |
+	| LCHIJA | jei               | 4.15.0.291            | jei_1.12.2-4.15.0.291.jar                     | None                                     |
+	| LCHIJA | appleskin         | 1.0.9                 | AppleSkin-mc1.12-1.0.9.jar                    | None                                     |
+	| LCHIJA | baubles           | 1.5.2                 | Baubles-1.12-1.5.2.jar                        | None                                     |
+	| LCHIJA | betterbedrock     | 5.1                   | BetterBedrock-1.12.2-5.1.11.jar               | None                                     |
+	| LCHIJA | bibliocraft       | 2.4.5                 | BiblioCraft[v2.4.5][MC1.12.2].jar             | None                                     |
+	| LCHIJA | cctweaked         | 1.85.0                | cc-tweaked-1.12.2-1.85.0.jar                  | None                                     |
+	| LCHIJA | computercraft     | 1.85.0                | cc-tweaked-1.12.2-1.85.0.jar                  | None                                     |
+	| LCHIJA | ctm               | MC1.12.2-1.0.0.29     | CTM-MC1.12.2-1.0.0.29.jar                     | None                                     |
+	| LCHIJA | chisel            | MC1.12.2-1.0.1.44     | Chisel-MC1.12.2-1.0.1.44.jar                  | None                                     |
+	| LCHIJA | clumps            | 3.1.2                 | Clumps-3.1.2.jar                              | None                                     |
+	| LCHIJA | controlling       | 3.0.7                 | Controlling-3.0.7.jar                         | None                                     |
+	| LCHIJA | creativecore      | 1.9.9                 | CreativeCore_v1.9.71_mc1.12.2.jar             | None                                     |
+	| LCHIJA | custommainmenu    | 2.0.9                 | CustomMainMenu-MC1.12.2-2.0.9.jar             | None                                     |
+	| LCHIJA | foamfix           | 0.10.8-1.12.2         | foamfix-0.10.8-1.12.2.jar                     | None                                     |
+	| LCHIJA | ftbbackups        | 1.1.0.1               | FTBBackups-1.1.0.1.jar                        | None                                     |
+	| LCHIJA | ftblib            | 5.4.4.4               | FTBLib-5.4.4.4.jar                            | None                                     |
+	| LCHIJA | ftbutilities      | 5.4.0.121             | FTBUtilities-5.4.0.121.jar                    | None                                     |
+	| LCHIJA | funkylocomotion   | 1.0                   | funky-locomotion-1.12.2-1.1.2.jar             | None                                     |
+	| LCHIJA | cfm               | 6.3.1                 | furniture-6.3.1-1.12.2.jar                    | None                                     |
+	| LCHIJA | waila             | 1.8.26                | Hwyla-1.8.26-B41_1.12.2.jar                   | None                                     |
+	| LCHIJA | ichunutil         | 7.2.2                 | iChunUtil-1.12.2-7.2.2.jar                    | 4db5c2bd1b556f252a5b8b54b256d381b2a0a6b8 |
+	| LCHIJA | ironchest         | 1.12.2-7.0.67.844     | ironchest-1.12.2-7.0.72.847.jar               | None                                     |
+	| LCHIJA | malisiscore       | 1.12.2-6.5.1-SNAPSHOT | malisiscore-1.12.2-6.5.1.jar                  | None                                     |
+	| LCHIJA | malisisdoors      | 1.12.2-7.3.0          | malisisdoors-1.12.2-7.3.0.jar                 | None                                     |
+	| LCHIJA | moreplayermodels  | 1.12.2                | MorePlayerModels_1.12.218jan18.jar            | None                                     |
+	| LCHIJA | mousetweaks       | 2.10                  | MouseTweaks-2.10-mc1.12.2.jar                 | None                                     |
+	| LCHIJA | mw                | 1.11.7.7              | mw-1.11.7.7_mc1.12.2.jar                      | None                                     |
+	| LCHIJA | norecipebook      | 1.2.1                 | noRecipeBook_v1.2.2formc1.12.2.jar            | None                                     |
+	| LCHIJA | oreexcavation     | 1.4.143               | OreExcavation-1.4.143.jar                     | None                                     |
+	| LCHIJA | placebo           | 1.6.0                 | Placebo-1.12.2-1.6.0.jar                      | None                                     |
+	| LCHIJA | railcraft         | 12.0.0                | railcraft-12.0.0.jar                          | a0c255ac501b2749537d5824bb0f0588bf0320fa |
+	| LCHIJA | sereneseasons     | 1.2.18                | SereneSeasons-1.12.2-1.2.18-universal.jar     | None                                     |
+	| LCHIJA | sync              | 7.1.0                 | Sync-1.12.2-7.1.0.jar                         | 4db5c2bd1b556f252a5b8b54b256d381b2a0a6b8 |
+	| LCHIJA | tails             | 1.12-1.10.0           | Tails-1.12-1.10.0.jar                         | None                                     |
+	| LCHIJA | tis3d             | 1.5.1.37              | TIS-3D-MC1.12.2-1.5.1.37.jar                  | None                                     |
+	| LCHIJA | toastcontrol      | 1.8.1                 | Toast+Control-1.12.2-1.8.1.jar                | None                                     |
+	| LCHIJA | tropicraft        | 7.1.9.115             | tropicraft-MC1.12.2-7.1.9.115.jar             | None                                     |
+	| LCHIJA | twilightforest    | 3.10.1013             | twilightforest-1.12.2-3.10.1013-universal.jar | None                                     |
+	| LCHIJA | valkyrienwarfare  | 0.9.2                 | ValkyrienWarfare+0.9_final-universal.jar      | None                                     |
+	| LCHIJA | reauth            | 3.6.0                 | reauth-3.6.0.jar                              | daba0ec4df71b6da841768c49fb873def208a1e3 |
+
+	Loaded coremods (and transformers): 
+CreativePatchingLoader (CreativeCore_v1.9.71_mc1.12.2.jar)
+  
+Do not report to Forge! (If you haven't disabled the FoamFix coremod, try disabling it in the config! Note that this bit of text will still appear.) (foamfix-0.10.8-1.12.2.jar)
+  pl.asie.foamfix.coremod.FoamFixTransformer
+SSLoadingPlugin (SereneSeasons-1.12.2-1.2.18-universal.jar)
+  sereneseasons.asm.transformer.EntityRendererTransformer
+  sereneseasons.asm.transformer.WorldTransformer
+CTMCorePlugin (CTM-MC1.12.2-1.0.0.29.jar)
+  team.chisel.ctm.client.asm.CTMTransformer
+AppleCore (AppleCore-mc1.12.2-3.2.0.jar)
+  squeek.applecore.asm.TransformerModuleHandler
+MixinLoaderForge (ValkyrienWarfare+0.9_final-universal.jar)
+  
+MalisisCorePlugin (malisiscore-1.12.2-6.5.1.jar)
+  
+ItemPatchingLoader (ItemPhysic_Full_1.4.26_mc1.12.2.jar)
+  com.creativemd.itemphysic.ItemTransformer
+weaponlib (mw-1.11.7.7_mc1.12.2.jar)
+  com.vicmatskiv.weaponlib.core.WeaponlibClassTransformer
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 436.30' Renderer: 'GeForce RTX 2070/PCIe/SSE2'
+	Launched Version: MultiMC5
+	LWJGL: 2.9.4
+	OpenGL: GeForce RTX 2070/PCIe/SSE2 GL version 4.6.0 NVIDIA 436.30, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x AMD Ryzen 5 1400 Quad-Core Processor 
