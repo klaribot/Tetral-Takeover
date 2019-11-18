@@ -1,0 +1,7 @@
+.minecraft/backups/
+.minecraft/crash-reports/
+.minecraft/logs/
+.minecraft/saves/
+.minecraft/user*cache.json
+.minecraft/journeymap/*.logs
+.minecraft/journeymap/data/

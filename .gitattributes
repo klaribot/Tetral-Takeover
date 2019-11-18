@@ -1,1 +1,4 @@
-.minecraft/mods/mw-1.11.7.7_mc1.12.2.jar filter=lfs diff=lfs merge=lfs -text
+.minecraft/shared/Alpine-3.8.1.iso filter=lfs diff=lfs merge=lfs -text
+.minecraft/mcvmRedistWin.zip filter=lfs diff=lfs merge=lfs -text
+.minecraft/mcvmRedistWin.zip filter=lfs diff=lfs merge=lfs -text
+.minecraft/shared/Alpine-3.8.1.iso filter=lfs diff=lfs merge=lfs -text
