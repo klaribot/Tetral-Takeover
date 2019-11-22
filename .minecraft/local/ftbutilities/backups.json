@@ -33,5 +33,12 @@
 		"index": 5,
 		"success": true,
 		"size": 862653521
+	},
+	{
+		"time": 1574379323696,
+		"file": "2019-11-21-18-35-23.zip",
+		"index": 6,
+		"success": true,
+		"size": 3513370
 	}
 ]
